@@ -37,9 +37,9 @@ f_hist_flag_WHZ <- function(folder_name){
   ## Find the cluster one
   all_files <- all_files[grepl(pattern = 'metadata_clean', x=all_files)]
   # Check if the folder exists
-  if (!dir.exists(paste(folder_name, '/', 'visualization_output', sep=''))) {
+  if (!dir.exists(paste(folder_name, '/', 'vis_output', sep=''))) {
     # If the folder does not exist, create it
-    dir.create(paste(folder_name, '/', 'visualization_output', sep=''), recursive = TRUE)
+    dir.create(paste(folder_name, '/', 'vis_output', sep=''), recursive = TRUE)
   }
   if(length(all_files) != 0){
     metadata <- rio::import(paste(folder_name, '/', all_files, sep=''))
@@ -52,7 +52,7 @@ f_hist_flag_WHZ <- function(folder_name){
                      axis.text.x = ggplot2::element_text(size=18),
                      axis.title.y = ggplot2::element_text(size=20),
                      axis.text.y = ggplot2::element_text(size=18))
-    ggplot2::ggsave(paste(folder_name, '/', 'visualization_output', '/', 'hist_flag_whz.png',sep=""),
+    ggplot2::ggsave(paste(folder_name, '/', 'vis_output', '/', 'hist_flag_whz.png',sep=""),
                     dpi = "print", units = "cm", width = 30, height = 30)
     return(plot_freq)
   }
@@ -69,9 +69,9 @@ f_hist_flag_WAZ <- function(folder_name){
   ## Find the cluster one
   all_files <- all_files[grepl(pattern = 'metadata_clean', x=all_files)]
   # Check if the folder exists
-  if (!dir.exists(paste(folder_name, '/', 'visualization_output', sep=''))) {
+  if (!dir.exists(paste(folder_name, '/', 'vis_output', sep=''))) {
     # If the folder does not exist, create it
-    dir.create(paste(folder_name, '/', 'visualization_output', sep=''), recursive = TRUE)
+    dir.create(paste(folder_name, '/', 'vis_output', sep=''), recursive = TRUE)
   }
   if(length(all_files) != 0){
     metadata <- rio::import(paste(folder_name, '/', all_files, sep=''))
@@ -84,7 +84,7 @@ f_hist_flag_WAZ <- function(folder_name){
                      axis.text.x = ggplot2::element_text(size=18),
                      axis.title.y = ggplot2::element_text(size=20),
                      axis.text.y = ggplot2::element_text(size=18))
-    ggplot2::ggsave(paste(folder_name, '/', 'visualization_output', '/', 'hist_flag_waz.png',sep=""),
+    ggplot2::ggsave(paste(folder_name, '/', 'vis_output', '/', 'hist_flag_waz.png',sep=""),
                     dpi = "print", units = "cm", width = 30, height = 30)
     return(plot_freq)
   }
@@ -101,9 +101,9 @@ f_hist_flag_HAZ <- function(folder_name){
   ## Find the cluster one
   all_files <- all_files[grepl(pattern = 'metadata_clean', x=all_files)]
   # Check if the folder exists
-  if (!dir.exists(paste(folder_name, '/', 'visualization_output', sep=''))) {
+  if (!dir.exists(paste(folder_name, '/', 'vis_output', sep=''))) {
     # If the folder does not exist, create it
-    dir.create(paste(folder_name, '/', 'visualization_output', sep=''), recursive = TRUE)
+    dir.create(paste(folder_name, '/', 'vis_output', sep=''), recursive = TRUE)
   }
   if(length(all_files) != 0){
     metadata <- rio::import(paste(folder_name, '/', all_files, sep=''))
@@ -116,7 +116,7 @@ f_hist_flag_HAZ <- function(folder_name){
                      axis.text.x = ggplot2::element_text(size=18),
                      axis.title.y = ggplot2::element_text(size=20),
                      axis.text.y = ggplot2::element_text(size=18))
-    ggplot2::ggsave(paste(folder_name, '/', 'visualization_output', '/', 'hist_flag_haz.png',sep=""),
+    ggplot2::ggsave(paste(folder_name, '/', 'vis_output', '/', 'hist_flag_haz.png',sep=""),
                     dpi = "print", units = "cm", width = 30, height = 30)
     return(plot_freq)
   }
@@ -133,9 +133,9 @@ f_hist_flag_bio <- function(folder_name){
   ## Find the cluster one
   all_files <- all_files[grepl(pattern = 'metadata_clean', x=all_files)]
   # Check if the folder exists
-  if (!dir.exists(paste(folder_name, '/', 'visualization_output', sep=''))) {
+  if (!dir.exists(paste(folder_name, '/', 'vis_output', sep=''))) {
     # If the folder does not exist, create it
-    dir.create(paste(folder_name, '/', 'visualization_output', sep=''), recursive = TRUE)
+    dir.create(paste(folder_name, '/', 'vis_output', sep=''), recursive = TRUE)
   }
   if(length(all_files) != 0){
     metadata <- rio::import(paste(folder_name, '/', all_files, sep=''))
@@ -148,7 +148,7 @@ f_hist_flag_bio <- function(folder_name){
                      axis.text.x = ggplot2::element_text(size=18),
                      axis.title.y = ggplot2::element_text(size=20),
                      axis.text.y = ggplot2::element_text(size=18))
-    ggplot2::ggsave(paste(folder_name, '/', 'visualization_output', '/', 'hist_flag_bio.png',sep=""),
+    ggplot2::ggsave(paste(folder_name, '/', 'vis_output', '/', 'hist_flag_bio.png',sep=""),
                     dpi = "print", units = "cm", width = 30, height = 30)
     return(plot_freq)
   }
@@ -165,9 +165,9 @@ f_plot_whz_year <- function(folder_name){
   ## Find the cluster one
   all_files <- all_files[grepl(pattern = 'metadata_clean', x=all_files)]
   # Check if the folder exists
-  if (!dir.exists(paste(folder_name, '/', 'visualization_output', sep=''))) {
+  if (!dir.exists(paste(folder_name, '/', 'vis_output', sep=''))) {
     # If the folder does not exist, create it
-    dir.create(paste(folder_name, '/', 'visualization_output', sep=''), recursive = TRUE)
+    dir.create(paste(folder_name, '/', 'vis_output', sep=''), recursive = TRUE)
   }
   if(length(all_files) != 0){
     metadata <- rio::import(paste(folder_name, '/', all_files, sep=''))|>
@@ -190,7 +190,6 @@ f_plot_whz_year <- function(folder_name){
                              cut(metadata$flag_whz,
                                  breaks = c(-Inf, 1, 5, Inf),
                                  labels = c('#166210', '#ffb04c', '#ed2727')))
-    metadata$color <- as.factor(metadata$color)
     plot <- ggplot2::ggplot(metadata, ggplot2::aes(x = year_recall_mid, y = new_name, color = color)) +
       ggplot2::geom_point(size = 3) +  # Ajouter des points
       ggplot2::scale_color_manual(
@@ -211,8 +210,8 @@ f_plot_whz_year <- function(folder_name){
                      legend.box.margin = ggplot2::margin(t = 10, r = 0, b = 0, l = 0),
                      legend.box.spacing = ggplot2::margin(0, 0, 0, 0)
       )
-    ggplot2::ggsave(paste(folder_name, '/', 'visualization_output', '/', 'flagged_whz_per_year_smart.png',sep=""),
-                    dpi = "print", units = "cm", width = 30, height = 20)
+    ggplot2::ggsave(paste(folder_name, '/', 'vis_output', '/', 'flagged_whz_per_year_smart.png',sep=""),
+                    dpi = "print", units = "cm", width = 30, height = 50)
     return(plot)
   }
 }
@@ -228,9 +227,9 @@ f_plot_haz_year <- function(folder_name){
   ## Find the cluster one
   all_files <- all_files[grepl(pattern = 'metadata_clean', x=all_files)]
   # Check if the folder exists
-  if (!dir.exists(paste(folder_name, '/', 'visualization_output', sep=''))) {
+  if (!dir.exists(paste(folder_name, '/', 'vis_output', sep=''))) {
     # If the folder does not exist, create it
-    dir.create(paste(folder_name, '/', 'visualization_output', sep=''), recursive = TRUE)
+    dir.create(paste(folder_name, '/', 'vis_output', sep=''), recursive = TRUE)
   }
   if(length(all_files) != 0){
     metadata <- rio::import(paste(folder_name, '/', all_files, sep=''))|>
@@ -252,7 +251,6 @@ f_plot_haz_year <- function(folder_name){
                              cut(metadata$flag_haz,
                                  breaks = c(-Inf, 1, 5, Inf),
                                  labels = c('#166210', '#ffb04c', '#ed2727')))
-    metadata$color <- as.factor(metadata$color)
     plot <- ggplot2::ggplot(metadata, ggplot2::aes(x = year_recall_mid, y = new_name, color = color)) +
       ggplot2::geom_point(size = 3) +  # Ajouter des points
       ggplot2::scale_color_manual(
@@ -273,8 +271,8 @@ f_plot_haz_year <- function(folder_name){
                      legend.box.margin = ggplot2::margin(t = 10, r = 0, b = 0, l = 0),
                      legend.box.spacing = ggplot2::margin(0, 0, 0, 0)
       )
-    ggplot2::ggsave(paste(folder_name, '/', 'visualization_output', '/', 'flagged_haz_per_year_smart.png',sep=""),
-                    dpi = "print", units = "cm", width = 30, height = 20)
+    ggplot2::ggsave(paste(folder_name, '/', 'vis_output', '/', 'flagged_haz_per_year_smart.png',sep=""),
+                    dpi = "print", units = "cm", width = 30, height = 50)
     return(plot)
   }
 }
@@ -290,9 +288,9 @@ f_plot_waz_year <- function(folder_name){
   ## Find the cluster one
   all_files <- all_files[grepl(pattern = 'metadata_clean', x=all_files)]
   # Check if the folder exists
-  if (!dir.exists(paste(folder_name, '/', 'visualization_output', sep=''))) {
+  if (!dir.exists(paste(folder_name, '/', 'vis_output', sep=''))) {
     # If the folder does not exist, create it
-    dir.create(paste(folder_name, '/', 'visualization_output', sep=''), recursive = TRUE)
+    dir.create(paste(folder_name, '/', 'vis_output', sep=''), recursive = TRUE)
   }
   if(length(all_files) != 0){
     metadata <- rio::import(paste(folder_name, '/', all_files, sep='')) |>
@@ -314,7 +312,6 @@ f_plot_waz_year <- function(folder_name){
                              cut(metadata$flag_waz,
                                  breaks = c(-Inf, 1, 5, Inf),
                                  labels = c('#166210', '#ffb04c', '#ed2727')))
-    metadata$color <- as.factor(metadata$color)
     plot <- ggplot2::ggplot(metadata, ggplot2::aes(x = year_recall_mid, y = new_name, color = color)) +
       ggplot2::geom_point(size = 3) +  # Ajouter des points
       ggplot2::scale_color_manual(
@@ -335,8 +332,8 @@ f_plot_waz_year <- function(folder_name){
                      legend.box.margin = ggplot2::margin(t = 10, r = 0, b = 0, l = 0),
                      legend.box.spacing = ggplot2::margin(0, 0, 0, 0)
       )
-    ggplot2::ggsave(paste(folder_name, '/', 'visualization_output', '/', 'flagged_waz_per_year_smart.png',sep=""),
-                    dpi = "print", units = "cm", width = 30, height = 20)
+    ggplot2::ggsave(paste(folder_name, '/', 'vis_output', '/', 'flagged_waz_per_year_smart.png',sep=""),
+                    dpi = "print", units = "cm", width = 30, height = 50)
     return(plot)
   }
 }
@@ -352,9 +349,9 @@ f_plot_boy_year <- function(folder_name){
   ## Find the cluster one
   all_files <- all_files[grepl(pattern = 'metadata_clean', x=all_files)]
   # Check if the folder exists
-  if (!dir.exists(paste(folder_name, '/', 'visualization_output', sep=''))) {
+  if (!dir.exists(paste(folder_name, '/', 'vis_output', sep=''))) {
     # If the folder does not exist, create it
-    dir.create(paste(folder_name, '/', 'visualization_output', sep=''), recursive = TRUE)
+    dir.create(paste(folder_name, '/', 'vis_output', sep=''), recursive = TRUE)
   }
   if(length(all_files) != 0){
     metadata <- rio::import(paste(folder_name, '/', all_files, sep='')) |>
@@ -377,7 +374,6 @@ f_plot_boy_year <- function(folder_name){
                              cut(metadata$perc_boys,
                                  breaks = c(-Inf, 0.4, 0.6, 1),
                                  labels = c('#b7cefa', '#166210', '#002f89')))
-    metadata$color <- as.factor(metadata$color)
     plot <- ggplot2::ggplot(metadata, ggplot2::aes(x = year_recall_mid, y = new_name, color = color)) +
       ggplot2::geom_point(size = 3) +  # Ajouter des points
       ggplot2::scale_color_manual(
@@ -398,8 +394,8 @@ f_plot_boy_year <- function(folder_name){
                      legend.box.margin = ggplot2::margin(t = 10, r = 0, b = 0, l = 0),
                      legend.box.spacing = ggplot2::margin(0, 0, 0, 0)
       )
-    ggplot2::ggsave(paste(folder_name, '/', 'visualization_output', '/', 'percentage_boy_girl_per_year_smart.png',sep=""),
-                    dpi = "print", units = "cm", width = 30, height = 20)
+    ggplot2::ggsave(paste(folder_name, '/', 'vis_output', '/', 'percentage_boy_girl_per_year_smart.png',sep=""),
+                    dpi = "print", units = "cm", width = 30, height = 50)
     return(plot)
   }
 }

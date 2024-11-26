@@ -23,9 +23,9 @@ f_plot_cdr_u5 <- function(folder_name){
   ## Find the cluster one
   all_files <- all_files[grepl(pattern = 'metadata_clean', x=all_files)]
   # Check if the folder exists
-  if (!dir.exists(paste(folder_name, '/', 'visualization_output', sep=''))) {
+  if (!dir.exists(paste(folder_name, '/', 'vis_output', sep=''))) {
     # If the folder does not exist, create it
-    dir.create(paste(folder_name, '/', 'visualization_output', sep=''), recursive = TRUE)
+    dir.create(paste(folder_name, '/', 'vis_output', sep=''), recursive = TRUE)
   }
   if(length(all_files) != 0){
     metadata <- rio::import(paste(folder_name, '/', all_files, sep='')) |>
@@ -53,13 +53,13 @@ f_plot_cdr_u5 <- function(folder_name){
       ggplot2::labs(x = "Year") +
       ggplot2::theme_bw()+
       ggplot2::theme(axis.text.x = ggplot2::element_text(size=16, angle=45, vjust=1, hjust=1),
-                     axis.title.y = ggplot2::element_text(size=12),
+                     axis.title.y = ggplot2::element_text(size=14),
                      axis.title.x = ggplot2::element_text(size=18),
-                     axis.text.y = ggplot2::element_text(size=14))
+                     axis.text.y = ggplot2::element_text(size=18))
 
-    ggplot2::ggsave(paste(folder_name, '/', 'visualization_output', '/',
+    ggplot2::ggsave(paste(folder_name, '/', 'vis_output', '/',
                           'cdr_u5', '_per_year.png', sep=''),
-                    dpi = "print", units = "cm", width = 20, height =20)
+                    dpi = "print", units = "cm", width = 20, height = 30)
     return(plot)
   }
 }
@@ -75,9 +75,9 @@ f_plot_cdr <- function(folder_name){
   ## Find the cluster one
   all_files <- all_files[grepl(pattern = 'metadata_clean', x=all_files)]
   # Check if the folder exists
-  if (!dir.exists(paste(folder_name, '/', 'visualization_output', sep=''))) {
+  if (!dir.exists(paste(folder_name, '/', 'vis_output', sep=''))) {
     # If the folder does not exist, create it
-    dir.create(paste(folder_name, '/', 'visualization_output', sep=''), recursive = TRUE)
+    dir.create(paste(folder_name, '/', 'vis_output', sep=''), recursive = TRUE)
   }
   if(length(all_files) != 0){
     metadata <- rio::import(paste(folder_name, '/', all_files, sep='')) |>
@@ -105,12 +105,12 @@ f_plot_cdr <- function(folder_name){
       ggplot2::labs(x = "Year") +
       ggplot2::theme_bw()+
       ggplot2::theme(axis.text.x = ggplot2::element_text(size=16, angle=45, vjust=1, hjust=1),
-                     axis.title.y = ggplot2::element_text(size=12),
+                     axis.title.y = ggplot2::element_text(size=14),
                      axis.title.x = ggplot2::element_text(size=18),
-                     axis.text.y = ggplot2::element_text(size=14))
-    ggplot2::ggsave(paste(folder_name, '/', 'visualization_output', '/',
+                     axis.text.y = ggplot2::element_text(size=18))
+    ggplot2::ggsave(paste(folder_name, '/', 'vis_output', '/',
                           'cdr', '_per_year.png', sep=''),
-                    dpi = "print", units = "cm", width = 20, height = 20)
+                    dpi = "print", units = "cm", width = 20, height = 30)
     return(plot)
   }
 }
