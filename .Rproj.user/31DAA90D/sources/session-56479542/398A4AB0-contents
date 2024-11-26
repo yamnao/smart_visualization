@@ -185,10 +185,10 @@ f_coverage_data <- function(folder_name){
                      strip.background = ggplot2::element_rect(fill=NA, colour="white"),
                      panel.spacing=ggplot2::unit(0,"cm"),
                      #strip.text.y = ggplot2::element_text(angle = 0, size = 16),
-                     strip.text.x = ggplot2::element_text(size=12),
-                     axis.title.x = ggplot2::element_text(size=12),
+                     strip.text.x = ggplot2::element_text(size=14),
+                     axis.title.x = ggplot2::element_text(size=14),
                      axis.title.y =ggplot2::element_blank(),
-                     axis.text.x = ggplot2::element_text(size=7, angle = 20),
+                     axis.text.x = ggplot2::element_text(size=12, angle = 20),
                      axis.text.y = ggplot2::element_blank(),
                      strip.text.y = ggplot2::element_blank(),
                      axis.ticks.y = ggplot2::element_blank())
