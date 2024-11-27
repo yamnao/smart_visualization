@@ -45,7 +45,7 @@ f_plot_cdr_u5 <- function(folder_name){
     metadata$year_recall_mid <- lubridate::year(metadata$recall_mid)
     metadata$month_recall_mid <- lubridate::month(metadata$recall_mid)
 
-    dr_lab <- "Under 5 years death rate - SMART SURVEYS INFORMATION (per 10,000 child-days)"
+    dr_lab <- "Survey estimates of under 5 years death rate (per 10,000 child-days)"
     plot <- ggplot2::ggplot(data = metadata, ggplot2::aes(x = factor(year_recall_mid), y= lshtm_cdr_u5_est)) +
       ggplot2::geom_boxplot() +
       ggplot2::scale_y_continuous(dr_lab)+
@@ -97,7 +97,7 @@ f_plot_cdr <- function(folder_name){
     metadata$year_recall_mid <- lubridate::year(metadata$recall_mid)
     metadata$month_recall_mid <- lubridate::month(metadata$recall_mid)
 
-    dr_lab <- "Crude death rate - SMART SURVEYS INFORMATION (per 10,000 person-days)"
+    dr_lab <- "Survey estimates of crude death rate (per 10,000 person-days)"
     plot <- ggplot2::ggplot(data = metadata, ggplot2::aes(x = factor(year_recall_mid), y= lshtm_cdr_est)) +
       ggplot2::geom_boxplot() +
       ggplot2::scale_y_continuous(dr_lab)+

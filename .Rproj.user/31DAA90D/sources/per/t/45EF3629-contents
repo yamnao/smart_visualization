@@ -191,15 +191,21 @@ f_plot_whz_year <- function(folder_name){
                                  breaks = c(-Inf, 1, 5, Inf),
                                  labels = c('#166210', '#ffb04c', '#ed2727')))
     metadata$color <- as.factor(metadata$color)
+    metadata$year_recall_mid <- as.Date(paste0(metadata$year_recall_mid, "-01-01"))
     plot <- ggplot2::ggplot(metadata, ggplot2::aes(x = year_recall_mid, y = new_name, color = color)) +
       ggplot2::geom_point(size = 3) +  # Ajouter des points
       ggplot2::scale_color_manual(
         values = c('1' = '#166210', '2' = '#ffb04c', '3' = '#ed2727', '4' = '#b3adad'),
         labels = c('1' = 'Flagged WHZ < 1%',
-                   '2' = 'Flagged WHZ entre 1 et 5%',
+                   '2' = 'Flagged WHZ between 1 and 5%',
                    '3' = 'Flagged WHZ > 5%',
                    '4' = 'No nutrition information')
-      ) +  # Définir les couleurs
+      ) +
+      ggplot2::scale_x_date(
+        date_breaks = "1 year",
+        date_labels = "%Y",
+        name = "Year"
+      ) + # Définir les couleurs
       ggplot2::labs(title = "Percentage of flagged WHZ per year and SMART Surveys",
                     x = "Year",
                     y = "SMART Surveys",
@@ -253,15 +259,21 @@ f_plot_haz_year <- function(folder_name){
                                  breaks = c(-Inf, 1, 5, Inf),
                                  labels = c('#166210', '#ffb04c', '#ed2727')))
     metadata$color <- as.factor(metadata$color)
+    metadata$year_recall_mid <- as.Date(paste0(metadata$year_recall_mid, "-01-01"))
     plot <- ggplot2::ggplot(metadata, ggplot2::aes(x = year_recall_mid, y = new_name, color = color)) +
       ggplot2::geom_point(size = 3) +  # Ajouter des points
       ggplot2::scale_color_manual(
         values = c('1' = '#166210', '2' = '#ffb04c', '3' = '#ed2727', '4' = '#b3adad'),
         labels = c('1' = 'Flagged HAZ < 1%',
-                   '2' = 'Flagged HAZ entre 1 et 5%',
+                   '2' = 'Flagged HAZ between 1 et 5%',
                    '3' = 'Flagged HAZ > 5%',
                    '4' = 'No nutrition information')
-      ) +  # Définir les couleurs
+      ) +
+      ggplot2::scale_x_date(
+        date_breaks = "1 year",
+        date_labels = "%Y",
+        name = "Year"
+      ) + # Définir les couleurs
       ggplot2::labs(title = "Percentage of flagged HAZ per year and SMART Surveys",
                     x = "Year",
                     y = "SMART Surveys",
@@ -315,15 +327,21 @@ f_plot_waz_year <- function(folder_name){
                                  breaks = c(-Inf, 1, 5, Inf),
                                  labels = c('#166210', '#ffb04c', '#ed2727')))
     metadata$color <- as.factor(metadata$color)
+    metadata$year_recall_mid <- as.Date(paste0(metadata$year_recall_mid, "-01-01"))
     plot <- ggplot2::ggplot(metadata, ggplot2::aes(x = year_recall_mid, y = new_name, color = color)) +
       ggplot2::geom_point(size = 3) +  # Ajouter des points
       ggplot2::scale_color_manual(
         values = c('1' = '#166210', '2' = '#ffb04c', '3' = '#ed2727', '4' = '#b3adad'),
         labels = c('1' = 'Flagged WAZ < 1%',
-                   '2' = 'Flagged WAZ entre 1 et 5%',
+                   '2' = 'Flagged WAZ between 1 et 5%',
                    '3' = 'Flagged WAZ > 5%',
                    '4' = 'No nutrition information')
-      ) +  # Définir les couleurs
+      ) +
+      ggplot2::scale_x_date(
+        date_breaks = "1 year",
+        date_labels = "%Y",
+        name = "Year"
+      ) + # Définir les couleurs
       ggplot2::labs(title = "Percentage of flagged WAZ per year and SMART Surveys",
                     x = "Year",
                     y = "SMART Surveys",

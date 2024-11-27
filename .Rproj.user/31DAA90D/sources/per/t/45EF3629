@@ -3,7 +3,7 @@
     "path": "~/SMART_Surveys_App/smart_visualization/R/plot_nutrition.R",
     "project_path": "R/plot_nutrition.R",
     "type": "r_source",
-    "hash": "0",
+    "hash": "4034694320",
     "contents": "",
     "dirty": false,
     "created": 1732623638536.0,
@@ -12,15 +12,15 @@
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "379,47",
-        "scrollLine": "0"
+        "cursorPosition": "218,7",
+        "scrollLine": "190"
     },
     "folds": "",
-    "lastKnownWriteTime": 1732624348,
+    "lastKnownWriteTime": 1732717277,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1732624348224,
+    "last_content_update": 1732717277790,
     "read_only": false,
     "read_only_alternatives": []
 }
